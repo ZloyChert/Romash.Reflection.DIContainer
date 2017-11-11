@@ -27,6 +27,9 @@ namespace ConsoleUI
             ClassWithNoParamsCtor one = di.CreateInstance<ClassWithNoParamsCtor>();
             ClassWithDifficultCtor two = di.CreateInstance<ClassWithDifficultCtor>();
             ClassWithSimpleCtor three = di.CreateInstance<ClassWithSimpleCtor>();
+            ClassWithDifficultFields four = di.CreateInstance<ClassWithDifficultFields>();
+
+
 
 
             Console.Read();

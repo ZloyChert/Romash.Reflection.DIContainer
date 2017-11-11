@@ -82,13 +82,13 @@ namespace DIContainer
             var properties = type.GetProperties().Where(n => n.IsDefined(typeof(ImportAttribute)));
             foreach (var property in properties)
             {
-                property.SetValue(instance, CreateInstance(property.PropertyType));
+                property.SetValue(instance, CreateInstance(ResovingDictionary[property.PropertyType]));
             }
 
             var fields = type.GetFields().Where(n => n.IsDefined(typeof(ImportAttribute)));
             foreach (var field in fields)
             {
-                field.SetValue(instance, CreateInstance(field.FieldType));
+                field.SetValue(instance, CreateInstance(ResovingDictionary[field.FieldType]));
             }
 
             return instance;
