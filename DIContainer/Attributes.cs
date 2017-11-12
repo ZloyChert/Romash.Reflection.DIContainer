@@ -16,6 +16,11 @@ namespace DIContainer
     {
     }
 
+    [AttributeUsage(AttributeTargets.Constructor)]
+    public class InjectedConstructorAttribute : Attribute
+    {
+    }
+
     [AttributeUsage(AttributeTargets.Class)]
     public class ExportAttribute : Attribute
     {

@@ -15,7 +15,7 @@ namespace ConsoleUI
         { }
     }
 
-    class Stub
+    abstract class Stub
     { }
 
     class Program
@@ -28,7 +28,7 @@ namespace ConsoleUI
             ClassWithDifficultCtor two = di.CreateInstance<ClassWithDifficultCtor>();
             ClassWithSimpleCtor three = di.CreateInstance<ClassWithSimpleCtor>();
             ClassWithDifficultFields four = di.CreateInstance<ClassWithDifficultFields>();
-
+            IInterface five = di.CreateInstance<IInterface>();
 
 
 
